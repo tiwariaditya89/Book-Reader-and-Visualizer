@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { ThemeProvider } from "@mui/system";
+import theme from "./styles/themes";
+import { useEffect } from "react";
+import AppBar from "./components/appbar";
+import Product from "./components/products";
+import '../src/App.css';
 
 function App() {
+  useEffect(() => {
+    document.title = "Tripund- Home";
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+        <AppBar />  
+        <Product />
+    </ThemeProvider>
   );
 }
 
