@@ -5,7 +5,7 @@ import { colors } from "../themes";
 export const ProductContianer = styled("div")(() => ({
   // display: "flex",
   // flexDirection: "column",
-  backgroundColor: "white",
+  // backgroundColor: "white",
 }));
 
 export const ProductHeader = styled("div")(() => ({
