@@ -1,0 +1,21 @@
+.special {
+    padding: 30px 50px;
+    background-image: linear-gradient(to top right, #E300A4, #1B2D36);
+}
+
+.special-heading {
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.choices {
+    color: #FFB703; 
+}
+
+.special-para {
+    color: #ffffff;
+}
+
+.book-section {
+    margin-top: 20px;
+}

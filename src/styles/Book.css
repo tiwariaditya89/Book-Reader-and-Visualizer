@@ -1,0 +1,23 @@
+.book-container {
+    display: flex;
+}
+
+.book-image {
+    height: 220px;
+    width: 150px;
+    background-color: #f7f7f7;
+    border-radius: 20px;
+}
+
+.book-details {
+    margin-left: 20px;
+    color: #ffffff;
+}
+
+.book-details h2 {
+    font-size: 3.125rem; 
+}
+
+.book-subtitle {
+    font-size: 1.52rem;;
+}

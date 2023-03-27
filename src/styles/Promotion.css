@@ -1,0 +1,6 @@
+marquee {
+    padding: 20px;
+    background-image: linear-gradient(to right, #E300A4, #1B2D36);
+    font-size: 20px;
+    color: #ffffff;
+}

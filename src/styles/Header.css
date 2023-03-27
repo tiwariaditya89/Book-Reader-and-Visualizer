@@ -1,0 +1,49 @@
+.header-details {
+    position: absolute;
+    bottom: 50px;
+    text-align: left;
+    left: 50px;
+}
+
+.header-title {
+    color: #fff;
+    font-size: 3.125rem;
+    letter-spacing: 5px;
+    z-index: auto;
+}
+
+.header-subtitle {
+    color: #fff;
+    font-size: 1.52rem;
+    letter-spacing: 2px;
+}
+
+.header-info {
+    color: #fff;
+}
+
+.header-rating {
+    color: #fff;
+    padding: 5px 15px;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.header-details-container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(80, 80, 80, 0.895), rgba(152, 152, 152, 0));
+    top: 0;
+    z-index: 2;
+}
+
+.header-details {
+    z-index: 10;
+}
