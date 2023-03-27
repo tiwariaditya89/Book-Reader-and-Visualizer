@@ -4,14 +4,28 @@ import Promotion from './components/Promotion/Promotion';
 import Special from './components/Special/Special';
 import Footer from './components/Footer/Footer';
 
+import { ThemeProvider } from "@mui/system";
+import theme from "./styles/themes";
+import { useEffect } from "react";
+import AppBar from "./components/appbar";
+import Product from "./components/products";
+import '../src/App.css';
+
 function App() {
+  useEffect(() => {
+    document.title = "Tripund- Home";
+  }, []);
+
   return (
-    <div>
-      <Header />
-      {/* <Promotion /> */}
-      <Special />
-      <Footer />
-    </div>
+    <ThemeProvider theme={theme}>
+        <AppBar />  
+        <Header />
+        <Product />
+        <Special />
+        <Product />
+        <Product />
+        <Footer />
+    </ThemeProvider>
   );
 }
 

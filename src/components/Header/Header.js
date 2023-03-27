@@ -19,7 +19,7 @@ function Header () {
 				showStatus={false}
 			>
 				<div className="header-details-container">
-					<img src={img1} height="400px" alt="something went wrong"/>
+					<img src={img1} className="header-image" alt="something went wrong"/>
 					<div className="header-details">
 						<h2 className="header-title">Book Title</h2>
 						<p className="header-subtitle">subtitle of the book</p>
@@ -29,7 +29,7 @@ function Header () {
 					<div className="overlay"></div>
 				</div>
 				<div className="header-details-container">
-					<img src={img2} height="400px" alt="something went wrong"/>
+					<img src={img2} className="header-image" alt="something went wrong"/>
 					<div className="header-details">
 						<h2 className="header-title">Book Title</h2>
 						<p className="header-subtitle">subtitle of the book</p>
@@ -39,7 +39,7 @@ function Header () {
 					<div className="overlay"></div>
 				</div>
 				<div className="header-details-container">
-					<img src={img2} height="400px" alt="something went wrong"/>
+					<img src={img2} className="header-image" alt="something went wrong"/>
 					<div className="header-details">
 						<h2 className="header-title">Book Title</h2>
 						<p className="header-subtitle">subtitle of the book</p>

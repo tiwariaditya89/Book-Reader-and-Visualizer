@@ -5,6 +5,10 @@
     left: 50px;
 }
 
+.header-image {
+    height: 70vh;
+}
+
 .header-title {
     color: #fff;
     font-size: 3.125rem;
