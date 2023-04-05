@@ -1,0 +1,29 @@
+.search {
+    background-color: #F7F7F7;
+}
+
+.search-container {
+    margin-top: 70px;
+    padding: 0 10px;
+}
+
+.search-title {
+    background-image: linear-gradient(to right, #E300A4, #1B2D36);
+    padding: 50px;
+    border-radius: 20px;
+
+}
+
+.search-title h1 {
+    font-size: 45px;
+    color: #fff;
+}
+
+.related-books {
+    margin-top: 40px;
+}
+
+.related-books h1 {
+    font-size: 30px;
+    margin-bottom: 16px;
+}

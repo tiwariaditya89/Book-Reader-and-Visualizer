@@ -2,10 +2,10 @@ import React from "react";
 import { ReactDOM } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
- import '../../styles/Header.css';
- import img1 from "../../static/images/img1.jpg";
- import img2 from "../../static/images/img2.jpg";
- import StarOutlineIcon from '@mui/icons-material/StarOutline';
+import '../../styles/Header.css';
+import img1 from "../../static/images/img1.jpg";
+import img2 from "../../static/images/img2.jpg";
+import StarOutlineIcon from '@mui/icons-material/StarOutline';
 
 
 function Header () {
