@@ -12,6 +12,10 @@ import Product from "./components/products";
 
 import Search from "./components/Search/Search";
 import '../src/App.css';
+import Checkout from './components/Checkout/Checkout';
+import Description from './components/Description/Description';
+import Cart from './components/Cart/Cart';
+import Reader from './components/Reader/Reader';
 
 function App() {
   useEffect(() => {
@@ -20,13 +24,18 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-        <AppBar />  
+        {/* <AppBar />  
         <Header />
         <Product />
         <Special />
         <Product />
         <Product />
-        <Footer />
+        <Footer /> */}
+        {/* <Search /> */}
+        {/* <Checkout /> */}
+        {/* <Description /> */}
+        {/* <Cart /> */}
+        <Reader />
     </ThemeProvider>
   );
 }

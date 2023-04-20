@@ -1,0 +1,147 @@
+.reader {
+	background-color: #f7f7f7;
+	min-height: 100vh;
+}
+
+.reader-container {
+	padding: 20px;
+	margin-top: 20px;
+
+}
+
+.front-page-cover,
+.back-page-cover {
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.front-page-cover {
+	background-image: url('../static/images/mahabhart.jpg');
+}
+
+.back-page-cover {
+	background-image: url('../static/images/ramayan.jpg');
+}
+
+.page-content {
+	position: relative !important;
+	height: 100%;
+}
+
+.page-footer {
+	position: absolute !important;
+	bottom: 0 !important;
+	right: 0;
+}
+
+.page {
+	padding: 16px;
+	background-color: #F2DEC6;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.reader-sidebar {
+	background-color: #fff;
+	padding: 40px;
+	border-radius: 24px;
+}
+
+.audio {
+	display: flex;
+	justify-content: space-between;
+}
+
+.audio h1 {
+	font-size: 34px;
+}
+
+.video {
+	margin-top: 24px;
+	background-color: #f7f7f7;
+	border-radius: 20px;
+	text-align: center;
+}
+
+.video video{
+	width: 100%;
+	border-radius: 20px;
+}
+
+.reader-grid {
+	width: 100%;
+}
+
+.demo-book {
+	margin: 0 auto;
+}
+
+.tracker {
+	margin-top: 50px;
+	padding: 35px 40px;
+	border-radius: 24px;
+	background-color: #fff;
+}
+
+.reader-summary {
+	margin-top: 16px;
+}
+
+.reader-summary h1{
+	font-size: 34px;
+}
+
+.reader-summary ul li {
+	margin-top: 16px;
+	list-style-type: '💡';
+	padding-inline-start: 1ch;
+}
+
+.MuiSlider-valueLabel {
+	display: none !important;
+	transform: translateY(-80px);
+	opacity: .3;
+	transition: all 1s ease-in-out;
+}
+
+.MuiSlider-valueLabel::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: calc(0% - 15%);
+	height: 5px;
+	width: 130%;
+	background-color: #F1B214 !important;
+}
+
+.labelHead {
+	font-size: 19px !important;
+}
+
+.labelSummary {
+	height: 120px;
+	white-space: pre-line !important;
+	overflow-y: scroll !important;
+	-ms-overflow-style: none !important;
+	scrollbar-width: none !important;
+	
+}
+
+.labelSummary::-webkit-scrollbar {
+	display: none; /* for Chrome, Safari, and Opera */
+}
+
+.labelSummary p {
+	font-size: 12px !important;
+}
+
+.MuiSlider-thumb:hover .MuiSlider-valueLabel{
+	display: block !important;
+	height: 180px !important;
+	color: #023047 !important;
+	width: 140px;
+	padding: 10px;
+	opacity: 1;
+	transform: translateY(-180px);	
+	background-color: #D9D9D9 !important;
+}

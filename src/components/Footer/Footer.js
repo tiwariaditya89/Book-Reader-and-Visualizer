@@ -15,7 +15,7 @@ function Footer() {
                     <h3>Tripund</h3>
                 </div>
                 <div className="footer-body">
-                    <Grid container columns={12}>
+                    <Grid container columns={12} spacing={2}>
                         <Grid item md={6} sm={12}>
                             <div className="footer-about">
                                 <h3>About <span>us</span></h3>
