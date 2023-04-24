@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import '../../styles/Login.css';
+import './Login.css';
 import { Button, Grid, TextField } from '@mui/material';
 import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
-import signup from '';
+import signup from '../images/SignUp_image.jpg';
 
 function Signup() {
     return(
