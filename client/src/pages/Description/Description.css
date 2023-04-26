@@ -1,0 +1,67 @@
+.description-header {
+    padding: 100px 40px;
+    background-image: url(https://images.pexels.com/photos/1557843/pexels-photo-1557843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    /* background-image: linear-gradient(90deg,rgba(69, 69, 69, 0.8) 30%,rgba(50, 50, 50, 0) 80%); */
+    /* background-color:  linear-gradient(90deg,rgba(69, 69, 69, 0.8) 30%,rgba(50, 50, 50, 0) 80%); */
+}
+.des-container{
+    /* display: flex; */
+    
+}
+.description-image {
+    height: 250px;
+    width: 200px;
+   
+}
+.description-image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+.description-details {
+    color: #fff;
+}
+.description-details h1 {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.description-action {
+    margin-top: 24px;
+}
+
+.read, .buy {
+    padding: 10px 50px !important;
+}
+
+.read {
+    background-color: #fff !important;
+    color: #FFB703 !important;
+}
+.read a{
+    color: #FFB703;
+}
+.buy {
+    margin-left: 26px !important;
+    color: #FFB703 !important;
+    border: 1px solid #FFB703 !important;
+}
+
+
+.also-like {
+    padding: 40px;
+}
+
+.also-like h1 {
+    margin-bottom: 24px;
+    font-size: 30px;
+}
+
+.des-container {
+    width: 100%;
+}
+
+.product{
+    display: flex;
+    flex-wrap: wrap;
+}
