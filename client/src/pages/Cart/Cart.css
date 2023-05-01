@@ -61,6 +61,16 @@
 
 .content {
     margin-top: 16px;
+
+}
+.quantity{
+    display: flex;
+}
+.content-heading{
+    text-align: center;
+}
+.content-body{
+    text-align: center;
 }
 
 .cart-summary-container {

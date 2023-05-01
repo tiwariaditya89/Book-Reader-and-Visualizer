@@ -7,7 +7,10 @@ import Cart from "./pages/Cart/Cart";
 import Reader from "./components/Reader/Reader";
 import { Routes, Route, Navigate } from "react-router-dom";
 import ProductList from "./pages/ProductList";
-import Product from './pages/Product'
+import Product from "./pages/Product";
+import Success from "./pages/Success";
+import Login from './pages/LoginSignUP/Login'
+import Signup from './pages/LoginSignUP/Signup'
 
 function App() {
   return (
@@ -16,10 +19,13 @@ function App() {
       <Route exact path='/products/:category' element={<ProductList />} />
       <Route exact path='/product' element={<ProductList />} />
       <Route path='/checkout' element={<Checkout />} />
-      <Route path='/description' element={<Description />} />
+      <Route path='/description/:id' element={<Description />} />
       <Route exact path='/product/:id' element={<Product />} />
       <Route path='/cart' element={<Cart />} />
+      <Route path='/success' element={<Success/>} />      
       <Route path='/reader' element={<Reader />} />
+      <Route path='/login' element={<Login/>} />
+      <Route path='/register' element={<Signup/>} />
     </Routes>
 
     /* <Routes>

@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import { Grid, Button } from "@mui/material";
 import "./Description.css";
 import Navbar from "../../components/Navbar";
 import { Product } from "../../components/Product";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { publicRequest } from "../../requestMethods";
 
 function Description() {
+  const location = useLocation();
+  const id = location.pathname.split("/")[2];
+  
+
+  const [product, setProduct] = useState({});
+
+  useEffect(() => {
+    const getProduct = async () => {
+      try {
+        const res = await publicRequest.get("/products/find/" + id);
+        setProduct(res.data);
+      } catch {}
+    };
+    getProduct();
+  }, [id]);
+ 
   return (
     <div className='description'>
       <Navbar />
@@ -15,17 +32,14 @@ function Description() {
           <Grid container columns={12} spacing={3}>
             <Grid item md={3} sm={12}>
               <div className='description-image'>
-                <img src='https://images.pexels.com/photos/1557843/pexels-photo-1557843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' />
+                <img src={product.img} />
               </div>
             </Grid>
             <Grid item md={9} sm={12}>
               <div className='description-details'>
-                <h1>Book Title</h1>
+                <h1>{Product.title}</h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  {product.desc}
                 </p>
                 <div className='description-action'>
                   <Link to={"/reader"}>
@@ -33,7 +47,7 @@ function Description() {
                       Read
                     </Button>
                   </Link>
-                  <Link to={"/product/slkfj"}>
+                  <Link to={`/product/${product._id}`}>
                     <Button variant='outlined' className='buy'>
                       Buy Now
                     </Button>
@@ -46,14 +60,14 @@ function Description() {
         <div className='also-like'>
           <h1>May You Like This</h1>
           <div className='product'>
+            {/* <Product />
             <Product />
             <Product />
             <Product />
             <Product />
             <Product />
             <Product />
-            <Product />
-            <Product />
+            <Product /> */}
           </div>
         </div>
       </div>

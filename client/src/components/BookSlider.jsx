@@ -57,38 +57,38 @@ const BookSlider = ({ item }) => {
     arrows: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 6,
+    slidesToShow: 4,
     slidesToScroll: 1,
 
-    responsive: [
-      {
-        breakpoint: 1424,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: false,
-        },
-      },
+    // responsive: [
+    //   {
+    //     breakpoint: 1424,
+    //     settings: {
+    //       slidesToShow: 5,
+    //       slidesToScroll: 3,
+    //       infinite: true,
+    //       dots: false,
+    //     },
+    //   },
 
-      {
-        breakpoint: 1124,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-    ],
+    //   {
+    //     breakpoint: 1124,
+    //     settings: {
+    //       slidesToShow: 4,
+    //       slidesToScroll: 2,
+    //       infinite: true,
+    //       dots: false,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 800,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1,
+    //       initialSlide: 2,
+    //     },
+    //   },
+    // ],
   };
 
   return (
@@ -117,7 +117,7 @@ const BookSlider = ({ item }) => {
       <SliderContent>
         <Slider ref={slider} {...settings}>
           {product.map((item, index) => {
-            return <Card item={item} key={item.id} />;
+            return <Card item={item} key={item._id} />;
           })}
         </Slider>
       </SliderContent>

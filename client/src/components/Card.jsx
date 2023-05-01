@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -84,6 +85,11 @@ const Button = styled.a`
 `;
 
 const Card = ({ item }) => {
+  // const location = useLocation();
+  // // const id = location.pathname.split("/")[2];
+  // // const [product, setProduct] = useState({});
+  // console.log(location);
+
   return (
     <Container>
       <Wrapper>
@@ -94,7 +100,7 @@ const Card = ({ item }) => {
           <Details>
             <Title>{item.title}</Title>
             <Desc>{item.desc}</Desc>
-            <Link to={"/description"}>
+            <Link to={`/description/${item._id}`}>
               <Button>             
                     Read More
               </Button>

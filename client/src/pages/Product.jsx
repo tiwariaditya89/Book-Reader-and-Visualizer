@@ -7,6 +7,9 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 import Navbar from "../components/Navbar";
+import { publicRequest } from "../requestMethods";
+import { addProduct } from "../redux/cartRedux";
+import { useDispatch } from "react-redux";
 
 const Container = styled.div``;
 const Wrapper = styled.div`
@@ -98,9 +101,33 @@ const Button = styled.button`
 `;
 
 const Product = () => {
-  
+  const location = useLocation();
+  const id = location.pathname.split("/")[2];
+  const [product, setProduct] = useState({});
+  const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    const getProduct = async () => {
+      try {
+        const res = await publicRequest.get("/products/find/" + id);
+        setProduct(res.data);
+      } catch {}
+    };
+    getProduct();
+  }, [id]);
 
+  const handleQuantity = (type) => {
+    if (type === "dec") {
+      quantity > 1 && setQuantity(quantity - 1);
+    } else {
+      setQuantity(quantity + 1);
+    }
+  };
+
+  const handleClick = () => {
+    dispatch(addProduct({ ...product, quantity }));
+  };
 
   return (
     <Container>
@@ -108,12 +135,12 @@ const Product = () => {
 
       <Wrapper>
         <ImageContainer>
-          <Image src="https://images.ctfassets.net/5gvckmvm9289/3BlDoZxSSjqAvv1jBJP7TH/65f9a95484117730ace42abf64e89572/Noissue-x-Creatsy-Tote-Bag-Mockup-Bundle-_4_-2.png" />
+          <Image src={product.img} />
         </ImageContainer>
         <InfoContainer>
-          <Title>Hello World</Title>
-          <Desc>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, incidunt hic. Debitis ipsum earum repellendus eius adipisci animi, illo incidunt voluptate ducimus omnis, ratione, quidem in voluptates distinctio eum sequi!</Desc>
-          <Price>$450</Price>
+          <Title>{product.title}</Title>
+          <Desc>{product.desc}</Desc>
+          <Price>₹ {product.price}</Price>
           <FilterContainer>
             {/* <Filter>
               <FilterTitle>Color</FilterTitle>
@@ -133,11 +160,11 @@ const Product = () => {
 
           <AddContainer>
             <AmountContainer>
-              <RemoveIcon  />
-              <Amount>4</Amount>
-              <AddIcon  />
+              <RemoveIcon onClick={() => handleQuantity("dec")} />
+              <Amount>{quantity}</Amount>
+              <AddIcon onClick={() => handleQuantity("inc")} />
             </AmountContainer>
-            <Button >ADD TO CART</Button>
+            <Button onClick={handleClick}>ADD TO CART</Button>
           </AddContainer>
         </InfoContainer>
       </Wrapper>
