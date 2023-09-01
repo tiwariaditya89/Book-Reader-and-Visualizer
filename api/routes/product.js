@@ -1,14 +1,35 @@
 const router = require("express").Router();
 const Product = require("../models/Product");
+// const fetch = require("node-fetch");
 const {
   verifyToken,
   verifyTokenAndAuthorization,
   verifyTokenAndAdmin,
 } = require("./VerifyToken");
 
+function callApi(pdfPath) {
+    // let audio = '';
+    // fetch('http://localhost:8000/pdf-to-audio/', {
+    //   method: 'POST',
+    //   body: pdfPath
+    // })
+    // .then(response => response.json())
+    // .then(data => {
+    //   console.log(data);
+    //   audio = `http://localhost:8000${data.file_url}`;
+    //   return audio;
+    // })
+    // .catch(error => console.error(error));
+    // return audio;
+    
+}
 // Create
 router.post('/', verifyTokenAndAdmin, async (req,res) =>{
     const newProduct = new Product(req.body)
+    // const pdfPath = newProduct.pdfPath
+    // console.log(pdfPath)
+    // const audio = callApi(pdfPath)
+    // console.log(audio)
     try {
         const savedproduct = await newProduct.save();
         res.status(201).json(savedproduct);
@@ -44,7 +65,7 @@ router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
   }
 });
 
-// Get Product
+// Get Product 
 router.get("/find/:id", async (req, res) => {
   try {
     const product = await Product.findById(req.params.id);

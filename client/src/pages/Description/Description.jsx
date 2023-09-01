@@ -10,7 +10,6 @@ import { publicRequest } from "../../requestMethods";
 function Description() {
   const location = useLocation();
   const id = location.pathname.split("/")[2];
-  
 
   const [product, setProduct] = useState({});
 
@@ -23,7 +22,7 @@ function Description() {
     };
     getProduct();
   }, [id]);
- 
+
   return (
     <div className='description'>
       <Navbar />
@@ -38,12 +37,10 @@ function Description() {
             <Grid item md={9} sm={12}>
               <div className='description-details'>
                 <h1>{Product.title}</h1>
-                <p>
-                  {product.desc}
-                </p>
+                <p>{product.desc}</p>
                 <div className='description-action'>
-                  <Link to={"/reader"}>
-                    <Button variant='contained' className='read'>
+                  <Link to={`/reader/${product._id}`}>
+                    <Button variant='contained' className='read' >
                       Read
                     </Button>
                   </Link>

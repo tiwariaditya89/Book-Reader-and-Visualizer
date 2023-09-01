@@ -11,6 +11,7 @@ import Product from "./pages/Product";
 import Success from "./pages/Success";
 import Login from './pages/LoginSignUP/Login'
 import Signup from './pages/LoginSignUP/Signup'
+import {pages} from './data';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
       <Route exact path='/product/:id' element={<Product />} />
       <Route path='/cart' element={<Cart />} />
       <Route path='/success' element={<Success/>} />      
-      <Route path='/reader' element={<Reader />} />
+      <Route path='/reader/:id' element={<Reader data={pages}/>} />
       <Route path='/login' element={<Login/>} />
       <Route path='/register' element={<Signup/>} />
     </Routes>

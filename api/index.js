@@ -10,6 +10,7 @@ const cartRoute = require("./routes/cart");
 const orderRoute = require("./routes/order");
 const descriptionRoute = require("./routes/description")
 const stripeRoute = require("./routes/stripe");
+const readerRoute = require("./routes/reader")
 
 dotenv.config();
 
@@ -28,6 +29,7 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
 app.use("/api/description",descriptionRoute)
+app.use("/api/reader",readerRoute)
 app.use("/api/cart", cartRoute);
 app.use("/api/orders", orderRoute);
 app.use("/api/checkout", stripeRoute);

@@ -12,6 +12,8 @@ const ProductSchema = new mongoose.Schema(
     price: { type: Number, required: true },
     audio: { type: String },
     video: { type: String },
+    pdfPath: {type: Object},
+    imgcontent: {type: Array},
     inStock: { type: Boolean, default: true },
   },
   { timestamps: true }

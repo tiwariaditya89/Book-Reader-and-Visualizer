@@ -9,13 +9,13 @@ function Book(props) {
  
       <div className={`book-container ${props.bookMargin}`}>
         <div className='book-image'>
-          <img src='https://images.pexels.com/photos/1557843/pexels-photo-1557843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' />
+          <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJNX6Zn8ZihPEzlKgQP31jx3n93OcV8Zsexg&usqp=CAU' />
         </div>
         
         <div className={`book-details ${props.color}`}>
-          <h2>Book Title</h2>
-          <p className='book-subtitle'>subtitle of the book</p>
-          <p className="desc">category | 230 pages</p>
+          <h2>Shri Bhagawat gita</h2>
+          <p className='book-subtitle'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit perspiciatis</p>
+          <p className="desc">Methology | 230 pages</p>
           <p className={`book-rating ${props.rating}`}>
             4 <StarOutlineIcon sx={{ fontSize: "16px" }} />
           </p>

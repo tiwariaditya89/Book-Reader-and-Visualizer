@@ -1,3 +1,32 @@
+export const pages = [
+
+  {
+    id:'64487659192314c2d776a40b',
+    imgcontent: [
+      "/media/71935505-173c-4c0a-a955-247bb40f8932-1.jpg",
+      "/media/71935505-173c-4c0a-a955-247bb40f8932-2.jpg"
+    ],
+    audio:'/media/output_290d56a3824f4d82a0db4d65c8750277.mp3'
+  },
+  {
+    id:'6448759d192314c2d776a409',
+    imgcontent: [
+      "/media/1d2e5814-2d90-4e70-a154-152c1cfcf138-1.jpg",
+      "/media/1d2e5814-2d90-4e70-a154-152c1cfcf138-2.jpg"
+    ],
+    audio:'/media/output_c3201327f84d4006a6e099b5e37c3914.mp3'
+  },
+  {
+    id:'644876e7192314c2d776a40d',
+    imgcontent: [
+      "/media/feec788f-d03a-4759-a6b4-a5c784f126db-1.jpg",
+      "/media/feec788f-d03a-4759-a6b4-a5c784f126db-2.jpg"
+    ],
+    audio:'/media/output_f8972ff03bc743669192de49c7366e52.mp3'
+  },
+  
+]
+
 export const sliderItems = [
   {
     id: 1,
