@@ -1,0 +1,58 @@
+.search {
+    background-color: #F7F7F7;
+}
+
+.search-container {
+    margin-top: 70px;
+    padding: 0 10px;
+}
+
+.search-title {
+    background-image: linear-gradient(to right, #E300A4, #1B2D36);
+    padding: 50px;
+    border-radius: 20px;
+
+}
+
+.search-title h1 {
+    font-size: 45px;
+    color: #fff;
+}
+
+.related-books {
+    margin-top: 40px;
+    padding-left: 70px;
+}
+
+.related-books h1 {
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+
+.filter {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 3px solid #b6b6b6;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    transition: all .2s ease-in-out;
+}
+
+.filter:hover {
+    color: #737373;
+    background-color: #f3f3f3;
+    transform: translateY(-2px);  
+}
+
+.filter-title {
+    font-size: 24px;
+    color: #023047;
+}
+
+.filter-category, .filter-rating {
+    margin-top: 16px;
+}
